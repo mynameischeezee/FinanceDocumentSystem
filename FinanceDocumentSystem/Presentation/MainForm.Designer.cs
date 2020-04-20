@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.pnl_Background = new System.Windows.Forms.Panel();
-            this.btn_AddFile = new System.Windows.Forms.Button();
-            this.pctr_Logo = new System.Windows.Forms.PictureBox();
-            this.btn_FileList = new System.Windows.Forms.Button();
-            this.HoverPanel = new System.Windows.Forms.Panel();
             this.lbl_Info = new System.Windows.Forms.Label();
+            this.HoverPanel = new System.Windows.Forms.Panel();
+            this.btn_AddFile = new System.Windows.Forms.Button();
+            this.btn_FileList = new System.Windows.Forms.Button();
+            this.pctr_Logo = new System.Windows.Forms.PictureBox();
+            this.usrtCtrlOpenFile = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlOpenFile();
             this.pnl_Background.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctr_Logo)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,27 @@
             this.pnl_Background.Size = new System.Drawing.Size(220, 681);
             this.pnl_Background.TabIndex = 0;
             // 
+            // lbl_Info
+            // 
+            this.lbl_Info.AutoSize = true;
+            this.lbl_Info.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_Info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.lbl_Info.Location = new System.Drawing.Point(15, 612);
+            this.lbl_Info.Name = "lbl_Info";
+            this.lbl_Info.Size = new System.Drawing.Size(182, 34);
+            this.lbl_Info.TabIndex = 1;
+            this.lbl_Info.Text = "Finance Document System \r\nVer. 1.0";
+            this.lbl_Info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Info.UseMnemonic = false;
+            // 
+            // HoverPanel
+            // 
+            this.HoverPanel.BackColor = System.Drawing.Color.White;
+            this.HoverPanel.Location = new System.Drawing.Point(0, 240);
+            this.HoverPanel.Name = "HoverPanel";
+            this.HoverPanel.Size = new System.Drawing.Size(8, 40);
+            this.HoverPanel.TabIndex = 1;
+            // 
             // btn_AddFile
             // 
             this.btn_AddFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -70,16 +92,6 @@
             this.btn_AddFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_AddFile.UseVisualStyleBackColor = false;
             this.btn_AddFile.Click += new System.EventHandler(this.btn_AddFile_Click);
-            // 
-            // pctr_Logo
-            // 
-            this.pctr_Logo.Image = global::FinanceDocumentSystem.Properties.Resources.Logo;
-            this.pctr_Logo.Location = new System.Drawing.Point(12, 12);
-            this.pctr_Logo.Name = "pctr_Logo";
-            this.pctr_Logo.Size = new System.Drawing.Size(184, 93);
-            this.pctr_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctr_Logo.TabIndex = 1;
-            this.pctr_Logo.TabStop = false;
             // 
             // btn_FileList
             // 
@@ -99,26 +111,23 @@
             this.btn_FileList.UseVisualStyleBackColor = false;
             this.btn_FileList.Click += new System.EventHandler(this.btn_FileList_Click);
             // 
-            // HoverPanel
+            // pctr_Logo
             // 
-            this.HoverPanel.BackColor = System.Drawing.Color.White;
-            this.HoverPanel.Location = new System.Drawing.Point(0, 240);
-            this.HoverPanel.Name = "HoverPanel";
-            this.HoverPanel.Size = new System.Drawing.Size(8, 40);
-            this.HoverPanel.TabIndex = 1;
+            this.pctr_Logo.Image = global::FinanceDocumentSystem.Properties.Resources.Logo;
+            this.pctr_Logo.Location = new System.Drawing.Point(12, 12);
+            this.pctr_Logo.Name = "pctr_Logo";
+            this.pctr_Logo.Size = new System.Drawing.Size(184, 93);
+            this.pctr_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctr_Logo.TabIndex = 1;
+            this.pctr_Logo.TabStop = false;
             // 
-            // lbl_Info
+            // usrtCtrlOpenFile
             // 
-            this.lbl_Info.AutoSize = true;
-            this.lbl_Info.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_Info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.lbl_Info.Location = new System.Drawing.Point(15, 612);
-            this.lbl_Info.Name = "lbl_Info";
-            this.lbl_Info.Size = new System.Drawing.Size(182, 34);
-            this.lbl_Info.TabIndex = 1;
-            this.lbl_Info.Text = "Finance Document System \r\nVer. 1.0";
-            this.lbl_Info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_Info.UseMnemonic = false;
+            this.usrtCtrlOpenFile.BackColor = System.Drawing.Color.White;
+            this.usrtCtrlOpenFile.Location = new System.Drawing.Point(220, 1);
+            this.usrtCtrlOpenFile.Name = "usrtCtrlOpenFile";
+            this.usrtCtrlOpenFile.Size = new System.Drawing.Size(1040, 680);
+            this.usrtCtrlOpenFile.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -126,6 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.usrtCtrlOpenFile);
             this.Controls.Add(this.pnl_Background);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
@@ -146,6 +156,7 @@
         private System.Windows.Forms.Button btn_FileList;
         private System.Windows.Forms.Panel HoverPanel;
         private System.Windows.Forms.Label lbl_Info;
+        private Presentation.User_Controls.UsrCtrlOpenFile usrtCtrlOpenFile;
     }
 }
 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FinanceDocumentSystem.Data_Access;
+using System.Configuration;
 
 namespace FinanceDocumentSystem
 {
@@ -21,6 +23,10 @@ namespace FinanceDocumentSystem
         {
             HoverPanel.Height = btn_AddFile.Height;
             HoverPanel.Top = btn_AddFile.Top;
+
+            DataSettings.CheckIfMainFolderExists();
+            DataSettings.CheckDocumentnFolderExists();
+
         }
 
         private void btn_AddFile_Click(object sender, EventArgs e)
