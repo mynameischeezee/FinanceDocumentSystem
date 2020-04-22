@@ -3,11 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinanceDocumentSystem.Data_Access;
+using FinanceDocumentSystem.Business_Logic.Enum;
+using FinanceDocumentSystem.Presentation.User_Controls;
 
 namespace FinanceDocumentSystem.Business_Logic.Class
 {
-   public static class DocumentLogic
+   public class DocumentLogic
     {
-        private static int currentID;
+        public int CurrentID;
+
+        public DocumentLogic()
+        {
+            
+        }
+
+        public void AddAnID()
+        {
+            CurrentID += 1;
+        }
     }
 }

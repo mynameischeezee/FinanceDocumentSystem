@@ -31,6 +31,8 @@
             this.pnl_DragAndDrop = new System.Windows.Forms.Panel();
             this.btn_FileOpen = new System.Windows.Forms.Button();
             this.OpenWindow = new System.Windows.Forms.OpenFileDialog();
+            this.lbl_DocumentPath = new System.Windows.Forms.Label();
+            this.btn_FileAdd = new System.Windows.Forms.Button();
             this.pnl_DragAndDrop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,17 +70,46 @@
             // 
             this.OpenWindow.FileName = "openFileDialog1";
             // 
-            // UsrtCtrlOpenFile
+            // lbl_DocumentPath
+            // 
+            this.lbl_DocumentPath.AutoSize = true;
+            this.lbl_DocumentPath.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_DocumentPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_DocumentPath.Location = new System.Drawing.Point(197, 523);
+            this.lbl_DocumentPath.Name = "lbl_DocumentPath";
+            this.lbl_DocumentPath.Size = new System.Drawing.Size(98, 16);
+            this.lbl_DocumentPath.TabIndex = 1;
+            this.lbl_DocumentPath.Text = "Шлях до файлу:";
+            // 
+            // btn_FileAdd
+            // 
+            this.btn_FileAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_FileAdd.FlatAppearance.BorderSize = 0;
+            this.btn_FileAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FileAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_FileAdd.ForeColor = System.Drawing.Color.White;
+            this.btn_FileAdd.Location = new System.Drawing.Point(467, 585);
+            this.btn_FileAdd.Name = "btn_FileAdd";
+            this.btn_FileAdd.Size = new System.Drawing.Size(108, 25);
+            this.btn_FileAdd.TabIndex = 1;
+            this.btn_FileAdd.Text = "Додати файл";
+            this.btn_FileAdd.UseVisualStyleBackColor = false;
+            this.btn_FileAdd.Click += new System.EventHandler(this.btn_FileAdd_Click);
+            // 
+            // UsrCtrlOpenFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btn_FileAdd);
+            this.Controls.Add(this.lbl_DocumentPath);
             this.Controls.Add(this.pnl_DragAndDrop);
-            this.Name = "UsrtCtrlOpenFile";
+            this.Name = "UsrCtrlOpenFile";
             this.Size = new System.Drawing.Size(1040, 680);
             this.Load += new System.EventHandler(this.UsrtCtrlOpenFile_Load);
             this.pnl_DragAndDrop.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -87,5 +118,7 @@
         private System.Windows.Forms.Panel pnl_DragAndDrop;
         private System.Windows.Forms.Button btn_FileOpen;
         private System.Windows.Forms.OpenFileDialog OpenWindow;
+        private System.Windows.Forms.Label lbl_DocumentPath;
+        public System.Windows.Forms.Button btn_FileAdd;
     }
 }

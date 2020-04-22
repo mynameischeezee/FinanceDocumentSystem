@@ -34,7 +34,9 @@
             this.btn_AddFile = new System.Windows.Forms.Button();
             this.btn_FileList = new System.Windows.Forms.Button();
             this.pctr_Logo = new System.Windows.Forms.PictureBox();
-            this.usrtCtrlOpenFile = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlOpenFile();
+            this.usrCtrlOpenFile = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlOpenFile();
+            this.usrCtrlSetDocumentInfo1 = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlSetDocumentInfo();
+            this.usrCtrlDocumentList1 = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlDocumentList();
             this.pnl_Background.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctr_Logo)).BeginInit();
             this.SuspendLayout();
@@ -121,13 +123,33 @@
             this.pctr_Logo.TabIndex = 1;
             this.pctr_Logo.TabStop = false;
             // 
-            // usrtCtrlOpenFile
+            // usrCtrlOpenFile
             // 
-            this.usrtCtrlOpenFile.BackColor = System.Drawing.Color.White;
-            this.usrtCtrlOpenFile.Location = new System.Drawing.Point(220, 1);
-            this.usrtCtrlOpenFile.Name = "usrtCtrlOpenFile";
-            this.usrtCtrlOpenFile.Size = new System.Drawing.Size(1040, 680);
-            this.usrtCtrlOpenFile.TabIndex = 1;
+            this.usrCtrlOpenFile.BackColor = System.Drawing.Color.White;
+            this.usrCtrlOpenFile.Location = new System.Drawing.Point(220, 0);
+            this.usrCtrlOpenFile.Name = "usrCtrlOpenFile";
+            this.usrCtrlOpenFile.Size = new System.Drawing.Size(1040, 680);
+            this.usrCtrlOpenFile.TabIndex = 1;
+            this.usrCtrlOpenFile.UsrCtrl = null;
+            // 
+            // usrCtrlSetDocumentInfo1
+            // 
+            this.usrCtrlSetDocumentInfo1.BackColor = System.Drawing.Color.White;
+            this.usrCtrlSetDocumentInfo1.Location = new System.Drawing.Point(220, 0);
+            this.usrCtrlSetDocumentInfo1.Name = "usrCtrlSetDocumentInfo1";
+            this.usrCtrlSetDocumentInfo1.Size = new System.Drawing.Size(1040, 680);
+            this.usrCtrlSetDocumentInfo1.TabIndex = 2;
+            this.usrCtrlSetDocumentInfo1.Load += new System.EventHandler(this.usrCtrlSetDocumentInfo1_Load);
+            // 
+            // usrCtrlDocumentList1
+            // 
+            this.usrCtrlDocumentList1.BackColor = System.Drawing.Color.White;
+            this.usrCtrlDocumentList1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.usrCtrlDocumentList1.Location = new System.Drawing.Point(220, 0);
+            this.usrCtrlDocumentList1.Name = "usrCtrlDocumentList1";
+            this.usrCtrlDocumentList1.Size = new System.Drawing.Size(1040, 680);
+            this.usrCtrlDocumentList1.TabIndex = 3;
+            this.usrCtrlDocumentList1.Load += new System.EventHandler(this.usrCtrlDocumentList1_Load);
             // 
             // MainForm
             // 
@@ -135,11 +157,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.usrtCtrlOpenFile);
+            this.Controls.Add(this.usrCtrlDocumentList1);
+            this.Controls.Add(this.usrCtrlSetDocumentInfo1);
+            this.Controls.Add(this.usrCtrlOpenFile);
             this.Controls.Add(this.pnl_Background);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.Text = "Finance Document System";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnl_Background.ResumeLayout(false);
             this.pnl_Background.PerformLayout();
@@ -156,7 +181,9 @@
         private System.Windows.Forms.Button btn_FileList;
         private System.Windows.Forms.Panel HoverPanel;
         private System.Windows.Forms.Label lbl_Info;
-        private Presentation.User_Controls.UsrCtrlOpenFile usrtCtrlOpenFile;
+        private Presentation.User_Controls.UsrCtrlOpenFile usrCtrlOpenFile;
+        private Presentation.User_Controls.UsrCtrlSetDocumentInfo usrCtrlSetDocumentInfo1;
+        private Presentation.User_Controls.UsrCtrlDocumentList usrCtrlDocumentList1;
     }
 }
 

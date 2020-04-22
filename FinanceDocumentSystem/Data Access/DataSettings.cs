@@ -13,19 +13,36 @@ namespace FinanceDocumentSystem.Data_Access
     {
         private static string _MainFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\FDS\Data\";
         private static string _DocumentFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\FDS\Data\Documents";
-        public static string MainFolderPath 
-            {
+        private static string _SettingsFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\FDS\Data\Settings";
+
+
+
+        public static string MainFolderPath
+        {
             get { return _MainFolderPath; }
             private set { MainFolderPath = value; }
-            }
+        }
 
         public static string DocumentFolderPath
         {
             get { return _DocumentFolderPath; }
             private set { DocumentFolderPath = value; }
         }
+        public static string SettingsFolderPath
+        {
+            get { return _SettingsFolderPath; }
+            private set { SettingsFolderPath = value; }
+        }
 
-
+        public static void CreateSettingsFile()
+        {
+            if (!File.Exists(SettingsFolderPath + @"\" + "DocumentSettings" + ".json "))
+            {
+                FileStream FileCreate = File.Create(SettingsFolderPath + @"\" + "DocumentSettings" + ".json");
+                FileCreate.Close();
+                File.WriteAllText(SettingsFolderPath + @"\" + "DocumentSettings" + ".json", "{\"CurrentID\":1}");
+            }
+        }
 
         public static void CheckIfMainFolderExists()
         {
@@ -41,7 +58,13 @@ namespace FinanceDocumentSystem.Data_Access
                 Directory.CreateDirectory(DocumentFolderPath);
             }
         }
-
+        public static void CheckSettingsFolderExists()
+        {
+            if (!Directory.Exists(SettingsFolderPath))
+            {
+                Directory.CreateDirectory(SettingsFolderPath);
+            }
+        }
     }
 
 }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace FinanceDocumentSystem.Business_Logic.Enum
 {
-    public class DocumentType
+    public enum DocumentType
     {
-
+        Inner,
+        External
     }
 }
