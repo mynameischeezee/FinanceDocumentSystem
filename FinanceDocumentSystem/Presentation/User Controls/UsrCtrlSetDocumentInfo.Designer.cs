@@ -230,7 +230,7 @@
             this.btn_FinishAddFile.ForeColor = System.Drawing.Color.White;
             this.btn_FinishAddFile.Image = global::FinanceDocumentSystem.Properties.Resources.file30px;
             this.btn_FinishAddFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_FinishAddFile.Location = new System.Drawing.Point(33, 585);
+            this.btn_FinishAddFile.Location = new System.Drawing.Point(20, 584);
             this.btn_FinishAddFile.Name = "btn_FinishAddFile";
             this.btn_FinishAddFile.Size = new System.Drawing.Size(165, 40);
             this.btn_FinishAddFile.TabIndex = 22;
@@ -278,15 +278,15 @@
         private System.Windows.Forms.Label lbl_DocumentDateInfo;
         private System.Windows.Forms.Label lbl_DocumentTypeInfo;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.ComboBox cmbBoxDocumentStatus;
-        private System.Windows.Forms.ComboBox cmbBoxDocumentType;
-        private System.Windows.Forms.TextBox txtBox_DocumentName;
-        private System.Windows.Forms.TextBox txtBox_DocumentSender;
         private System.Windows.Forms.Label lbl_DocumentDateValue;
         private System.Windows.Forms.Label lbl_DocumentText;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_FinishAddFile;
         public System.Windows.Forms.RichTextBox rchTxtBox_DocumentText;
         public System.Windows.Forms.Label lbl_DocumentIDValue;
+        public System.Windows.Forms.ComboBox cmbBoxDocumentStatus;
+        public System.Windows.Forms.ComboBox cmbBoxDocumentType;
+        public System.Windows.Forms.TextBox txtBox_DocumentName;
+        public System.Windows.Forms.TextBox txtBox_DocumentSender;
     }
 }

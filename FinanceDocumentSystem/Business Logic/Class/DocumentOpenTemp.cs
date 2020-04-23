@@ -95,8 +95,17 @@ namespace FinanceDocumentSystem.Business_Logic.Class
         }
         public static string OpenDocument()
         {
-            string FileRead = File.ReadAllText(Path);
-            return FileRead;
+            if (File.Exists(Path))
+            {
+                string FileRead = File.ReadAllText(Path);
+                return FileRead;
+            }
+            else
+            {
+                return "None";
+            }
+
+            
         }
         public static void ResetValues()
         {

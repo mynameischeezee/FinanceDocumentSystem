@@ -40,7 +40,7 @@ namespace FinanceDocumentSystem.Data_Access
             {
                 FileStream FileCreate = File.Create(SettingsFolderPath + @"\" + "DocumentSettings" + ".json");
                 FileCreate.Close();
-                File.WriteAllText(SettingsFolderPath + @"\" + "DocumentSettings" + ".json", "{\"CurrentID\":1}");
+                File.WriteAllText(SettingsFolderPath + @"\" + "DocumentSettings" + ".json", "{\"CurrentID\":0}");
             }
         }
 

@@ -94,8 +94,12 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
                 {
                     UsrCtrl?.BringToFront();
                     DocumentOpenTemp.SetDocumentPath(FilePath);
+
                     UsrCtrl.rchTxtBox_DocumentText.Text = DocumentOpenTemp.OpenDocument();
                     UsrCtrl.lbl_DocumentIDValue.Text = Convert.ToString(MainDocumentLogic.logic.CurrentID + 1);
+                    UsrCtrl.txtBox_DocumentName.Text = "Назва документу";
+                    UsrCtrl.txtBox_DocumentSender.Text = "Адресат";
+                    
                     
                 }
                 else

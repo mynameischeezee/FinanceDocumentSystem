@@ -22,12 +22,13 @@ namespace FinanceDocumentSystem
         {
             InitializeComponent();
             usrCtrlOpenFile.UsrCtrl = usrCtrlSetDocumentInfo1;
+            usrCtrlSetDocumentInfo1.UsrCtrl = usrCtrlOpenFile;
 
             DataSettings.CheckIfMainFolderExists();
             DataSettings.CheckDocumentnFolderExists();
             DataSettings.CheckSettingsFolderExists();
             DataSettings.CreateSettingsFile();
-            Console.WriteLine(MainDocumentLogic.DocumentList.Count);
+
 
             MainDocumentLogic.logic = JsonDeserialization.DeSerializeObject<DocumentLogic>(MainDocumentLogic.logic, DataSettings.SettingsFolderPath, "DocumentSettings");
             LoadEveryDocument.LoadDocuments();

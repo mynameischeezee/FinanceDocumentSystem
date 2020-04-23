@@ -16,6 +16,7 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
 {
     public partial class UsrCtrlSetDocumentInfo : UserControl
     {
+        public UsrCtrlOpenFile UsrCtrl { get; set; }
         public UsrCtrlSetDocumentInfo()
         {
             InitializeComponent();
@@ -58,6 +59,9 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
             MainDocumentLogic.AddDocument(document);
             
             DocumentOpenTemp.ResetValues();
+
+            UsrCtrl?.BringToFront();
+
 
         }
 
