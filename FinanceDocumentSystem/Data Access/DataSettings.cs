@@ -16,7 +16,7 @@ namespace FinanceDocumentSystem.Data_Access
         private static string _SettingsFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\FDS\Data\Settings";
 
 
-
+       
         public static string MainFolderPath
         {
             get { return _MainFolderPath; }

@@ -80,6 +80,7 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
             try
             {
                 string fileExt = FilePath.Substring(FilePath.IndexOf('.'));
+                
             }
             catch
             {

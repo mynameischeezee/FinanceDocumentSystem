@@ -34,9 +34,9 @@
             this.btn_AddFile = new System.Windows.Forms.Button();
             this.btn_FileList = new System.Windows.Forms.Button();
             this.pctr_Logo = new System.Windows.Forms.PictureBox();
-            this.usrCtrlOpenFile = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlOpenFile();
-            this.usrCtrlSetDocumentInfo1 = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlSetDocumentInfo();
             this.usrCtrlDocumentList1 = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlDocumentList();
+            this.usrCtrlSetDocumentInfo1 = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlSetDocumentInfo();
+            this.usrCtrlOpenFile = new FinanceDocumentSystem.Presentation.User_Controls.UsrCtrlOpenFile();
             this.pnl_Background.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctr_Logo)).BeginInit();
             this.SuspendLayout();
@@ -123,24 +123,6 @@
             this.pctr_Logo.TabIndex = 1;
             this.pctr_Logo.TabStop = false;
             // 
-            // usrCtrlOpenFile
-            // 
-            this.usrCtrlOpenFile.BackColor = System.Drawing.Color.White;
-            this.usrCtrlOpenFile.Location = new System.Drawing.Point(220, 0);
-            this.usrCtrlOpenFile.Name = "usrCtrlOpenFile";
-            this.usrCtrlOpenFile.Size = new System.Drawing.Size(1040, 680);
-            this.usrCtrlOpenFile.TabIndex = 1;
-            this.usrCtrlOpenFile.UsrCtrl = null;
-            // 
-            // usrCtrlSetDocumentInfo1
-            // 
-            this.usrCtrlSetDocumentInfo1.BackColor = System.Drawing.Color.White;
-            this.usrCtrlSetDocumentInfo1.Location = new System.Drawing.Point(220, 0);
-            this.usrCtrlSetDocumentInfo1.Name = "usrCtrlSetDocumentInfo1";
-            this.usrCtrlSetDocumentInfo1.Size = new System.Drawing.Size(1040, 680);
-            this.usrCtrlSetDocumentInfo1.TabIndex = 2;
-            this.usrCtrlSetDocumentInfo1.Load += new System.EventHandler(this.usrCtrlSetDocumentInfo1_Load);
-            // 
             // usrCtrlDocumentList1
             // 
             this.usrCtrlDocumentList1.BackColor = System.Drawing.Color.White;
@@ -150,6 +132,25 @@
             this.usrCtrlDocumentList1.Size = new System.Drawing.Size(1040, 680);
             this.usrCtrlDocumentList1.TabIndex = 3;
             this.usrCtrlDocumentList1.Load += new System.EventHandler(this.usrCtrlDocumentList1_Load);
+            // 
+            // usrCtrlSetDocumentInfo1
+            // 
+            this.usrCtrlSetDocumentInfo1.BackColor = System.Drawing.Color.White;
+            this.usrCtrlSetDocumentInfo1.Location = new System.Drawing.Point(220, 0);
+            this.usrCtrlSetDocumentInfo1.Name = "usrCtrlSetDocumentInfo1";
+            this.usrCtrlSetDocumentInfo1.Size = new System.Drawing.Size(1040, 680);
+            this.usrCtrlSetDocumentInfo1.TabIndex = 2;
+            this.usrCtrlSetDocumentInfo1.UsrCtrl = null;
+            this.usrCtrlSetDocumentInfo1.Load += new System.EventHandler(this.usrCtrlSetDocumentInfo1_Load);
+            // 
+            // usrCtrlOpenFile
+            // 
+            this.usrCtrlOpenFile.BackColor = System.Drawing.Color.White;
+            this.usrCtrlOpenFile.Location = new System.Drawing.Point(220, 0);
+            this.usrCtrlOpenFile.Name = "usrCtrlOpenFile";
+            this.usrCtrlOpenFile.Size = new System.Drawing.Size(1040, 680);
+            this.usrCtrlOpenFile.TabIndex = 1;
+            this.usrCtrlOpenFile.UsrCtrl = null;
             // 
             // MainForm
             // 

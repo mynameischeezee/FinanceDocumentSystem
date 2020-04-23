@@ -25,7 +25,7 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
 
         public void AddDocumentsToList()
         {
-            listBoxDocuments.Items.Clear();   
+            listBoxDocuments.Items.Clear();
             listBoxDocuments.Items.Add("Документ: ");
             foreach (Document document in MainDocumentLogic.DocumentList)
             {
