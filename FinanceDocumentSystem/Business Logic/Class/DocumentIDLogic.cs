@@ -9,14 +9,9 @@ using FinanceDocumentSystem.Presentation.User_Controls;
 
 namespace FinanceDocumentSystem.Business_Logic.Class
 {
-   public class DocumentLogic
+   public class DocumentIDLogic
     {
         public int CurrentID;
-
-        public DocumentLogic()
-        {
-            
-        }
 
         public void AddAnID()
         {

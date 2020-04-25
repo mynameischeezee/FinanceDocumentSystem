@@ -42,10 +42,11 @@
             this.lbl_DocumentSenderInfo = new System.Windows.Forms.Label();
             this.cmbBoxDocumentStatus = new System.Windows.Forms.ComboBox();
             this.lbl_DocumentStatusInfo = new System.Windows.Forms.Label();
-            this.btn_FinishAddFile = new System.Windows.Forms.Button();
             this.lbl_DocumentDateValue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxDocuments = new System.Windows.Forms.ListBox();
+            this.btn_DeleteDocument = new System.Windows.Forms.Button();
+            this.btn_FinishAddFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBox_DocumentName
@@ -213,22 +214,6 @@
             this.lbl_DocumentStatusInfo.TabIndex = 29;
             this.lbl_DocumentStatusInfo.Text = "Cтатус виконання:";
             // 
-            // btn_FinishAddFile
-            // 
-            this.btn_FinishAddFile.BackColor = System.Drawing.Color.Silver;
-            this.btn_FinishAddFile.FlatAppearance.BorderSize = 0;
-            this.btn_FinishAddFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_FinishAddFile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_FinishAddFile.ForeColor = System.Drawing.Color.White;
-            this.btn_FinishAddFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_FinishAddFile.Location = new System.Drawing.Point(327, 599);
-            this.btn_FinishAddFile.Name = "btn_FinishAddFile";
-            this.btn_FinishAddFile.Size = new System.Drawing.Size(149, 40);
-            this.btn_FinishAddFile.TabIndex = 31;
-            this.btn_FinishAddFile.Text = "Зберегти зміни";
-            this.btn_FinishAddFile.UseVisualStyleBackColor = false;
-            this.btn_FinishAddFile.Click += new System.EventHandler(this.btn_FinishAddFile_Click);
-            // 
             // lbl_DocumentDateValue
             // 
             this.lbl_DocumentDateValue.AutoSize = true;
@@ -249,7 +234,6 @@
             this.label2.Size = new System.Drawing.Size(199, 22);
             this.label2.TabIndex = 34;
             this.label2.Text = "Перелік Документів:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // listBoxDocuments
             // 
@@ -265,11 +249,47 @@
             this.listBoxDocuments.TabIndex = 35;
             this.listBoxDocuments.SelectedIndexChanged += new System.EventHandler(this.listBoxDocuments_SelectedIndexChanged);
             // 
+            // btn_DeleteDocument
+            // 
+            this.btn_DeleteDocument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btn_DeleteDocument.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteDocument.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_DeleteDocument.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteDocument.Image = global::FinanceDocumentSystem.Properties.Resources.delete30;
+            this.btn_DeleteDocument.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DeleteDocument.Location = new System.Drawing.Point(327, 629);
+            this.btn_DeleteDocument.Name = "btn_DeleteDocument";
+            this.btn_DeleteDocument.Size = new System.Drawing.Size(177, 40);
+            this.btn_DeleteDocument.TabIndex = 36;
+            this.btn_DeleteDocument.Text = "Видалити документ";
+            this.btn_DeleteDocument.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_DeleteDocument.UseVisualStyleBackColor = false;
+            this.btn_DeleteDocument.Click += new System.EventHandler(this.btn_DeleteDocument_Click);
+            // 
+            // btn_FinishAddFile
+            // 
+            this.btn_FinishAddFile.BackColor = System.Drawing.Color.Silver;
+            this.btn_FinishAddFile.FlatAppearance.BorderSize = 0;
+            this.btn_FinishAddFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FinishAddFile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_FinishAddFile.ForeColor = System.Drawing.Color.White;
+            this.btn_FinishAddFile.Image = global::FinanceDocumentSystem.Properties.Resources.save;
+            this.btn_FinishAddFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_FinishAddFile.Location = new System.Drawing.Point(327, 577);
+            this.btn_FinishAddFile.Name = "btn_FinishAddFile";
+            this.btn_FinishAddFile.Size = new System.Drawing.Size(177, 40);
+            this.btn_FinishAddFile.TabIndex = 31;
+            this.btn_FinishAddFile.Text = "     Зберегти зміни";
+            this.btn_FinishAddFile.UseVisualStyleBackColor = false;
+            this.btn_FinishAddFile.Click += new System.EventHandler(this.btn_FinishAddFile_Click);
+            // 
             // UsrCtrlDocumentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btn_DeleteDocument);
             this.Controls.Add(this.listBoxDocuments);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_DocumentDateValue);
@@ -291,7 +311,6 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "UsrCtrlDocumentList";
             this.Size = new System.Drawing.Size(1040, 680);
-            this.Load += new System.EventHandler(this.UsrCtrlDocumentList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +336,6 @@
         private System.Windows.Forms.Label lbl_DocumentDateValue;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.ListBox listBoxDocuments;
+        private System.Windows.Forms.Button btn_DeleteDocument;
     }
 }

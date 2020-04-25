@@ -105,7 +105,6 @@ namespace FinanceDocumentSystem.Business_Logic.Class
                 return "None";
             }
 
-            
         }
         public static void ResetValues()
         {
@@ -114,8 +113,6 @@ namespace FinanceDocumentSystem.Business_Logic.Class
             Sender = "";
             Text = "";
             Status = false;
-
-
         }
     }
 }

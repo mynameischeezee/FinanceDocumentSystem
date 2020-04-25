@@ -50,17 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business Logic\Class\CompareUserControls.cs" />
     <Compile Include="Business Logic\Class\Document.cs" />
-    <Compile Include="Business Logic\Class\DocumentLogic.cs" />
+    <Compile Include="Business Logic\Class\DocumentIDLogic.cs" />
     <Compile Include="Business Logic\Class\DocumentOpenTemp.cs" />
     <Compile Include="Business Logic\Class\MainDocumentLogic.cs" />
     <Compile Include="Business Logic\Class\SelectStatus.cs" />
     <Compile Include="Business Logic\Class\SelectType.cs" />
     <Compile Include="Business Logic\Enum\DocumentType.cs" />
+    <Compile Include="Data Access\CleanDocumentFolder.cs" />
     <Compile Include="Data Access\DataSettings.cs" />
     <Compile Include="Data Access\JsonDeserialization.cs" />
     <Compile Include="Data Access\JsonSerialization.cs" />
-    <Compile Include="Data Access\LoadEveryDocument.cs" />
+    <Compile Include="Data Access\SaveDocumentList.cs" />
+    <Compile Include="Data Access\LoadDocumentList.cs" />
     <Compile Include="Presentation\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +157,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Media\Images\file30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\Images\save30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\Images\delete30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\Images\save30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\Images\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\Images\delete30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

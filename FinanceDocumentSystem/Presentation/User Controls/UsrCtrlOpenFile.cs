@@ -69,12 +69,6 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
                 FilePath = OpenWindow.FileName;
             }
         }
-
-        private void UsrtCtrlOpenFile_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_FileAdd_Click(object sender, EventArgs e)
         {
             try
@@ -93,6 +87,7 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
                 string fileExt = FilePath.Substring(FilePath.IndexOf('.'));
                 if (fileExt == ".docx" || fileExt == ".doc" || fileExt == ".txt")
                 {
+                    MainForm.ActiveControl = UsrCtrl;
                     UsrCtrl?.BringToFront();
                     DocumentOpenTemp.SetDocumentPath(FilePath);
 
@@ -100,8 +95,6 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
                     UsrCtrl.lbl_DocumentIDValue.Text = Convert.ToString(MainDocumentLogic.logic.CurrentID + 1);
                     UsrCtrl.txtBox_DocumentName.Text = "Назва документу";
                     UsrCtrl.txtBox_DocumentSender.Text = "Адресат";
-                    
-                    
                 }
                 else
                 {

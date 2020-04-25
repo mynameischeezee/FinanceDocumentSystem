@@ -131,7 +131,6 @@
             this.usrCtrlDocumentList1.Name = "usrCtrlDocumentList1";
             this.usrCtrlDocumentList1.Size = new System.Drawing.Size(1040, 680);
             this.usrCtrlDocumentList1.TabIndex = 3;
-            this.usrCtrlDocumentList1.Load += new System.EventHandler(this.usrCtrlDocumentList1_Load);
             // 
             // usrCtrlSetDocumentInfo1
             // 
@@ -141,7 +140,6 @@
             this.usrCtrlSetDocumentInfo1.Size = new System.Drawing.Size(1040, 680);
             this.usrCtrlSetDocumentInfo1.TabIndex = 2;
             this.usrCtrlSetDocumentInfo1.UsrCtrl = null;
-            this.usrCtrlSetDocumentInfo1.Load += new System.EventHandler(this.usrCtrlSetDocumentInfo1_Load);
             // 
             // usrCtrlOpenFile
             // 

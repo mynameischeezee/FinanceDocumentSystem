@@ -10,7 +10,7 @@ namespace FinanceDocumentSystem.Business_Logic.Class
 {
    public static class MainDocumentLogic
     {
-        public static DocumentLogic logic;
+        public static DocumentIDLogic logic;
 
         public static List<Document> DocumentList = new List<Document>();
 
@@ -22,15 +22,6 @@ namespace FinanceDocumentSystem.Business_Logic.Class
         {
             DocumentList.Remove(document);
 
-        }
-
-        public static void SerializeDocumentList()
-        {
-            foreach (Document document in DocumentList)
-            {
-                
-                JsonSerialization.SerializeObject(document, DataSettings.DocumentFolderPath, Convert.ToString(document.ID));
-            }
         }
     }
 }

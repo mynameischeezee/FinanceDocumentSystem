@@ -101,7 +101,6 @@
             this.lbl_DocumentDateInfo.Size = new System.Drawing.Size(62, 22);
             this.lbl_DocumentDateInfo.TabIndex = 4;
             this.lbl_DocumentDateInfo.Text = "Дата:";
-            this.lbl_DocumentDateInfo.Click += new System.EventHandler(this.lbl_DocumentDateInfo_Click);
             // 
             // lbl_DocumentTypeInfo
             // 
@@ -166,7 +165,6 @@
             this.txtBox_DocumentName.Size = new System.Drawing.Size(211, 24);
             this.txtBox_DocumentName.TabIndex = 16;
             this.txtBox_DocumentName.Text = "Назва документу";
-            this.txtBox_DocumentName.TextChanged += new System.EventHandler(this.txtBoxDocumentName_TextChanged);
             // 
             // txtBox_DocumentSender
             // 

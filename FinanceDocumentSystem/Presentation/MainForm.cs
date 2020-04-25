@@ -17,6 +17,7 @@ namespace FinanceDocumentSystem
 {
     public partial class MainForm : Form
     {
+        public static UserControl ActiveControl;
 
         public MainForm()
         {
@@ -30,56 +31,79 @@ namespace FinanceDocumentSystem
             DataSettings.CreateSettingsFile();
 
 
-            MainDocumentLogic.logic = JsonDeserialization.DeSerializeObject<DocumentLogic>(MainDocumentLogic.logic, DataSettings.SettingsFolderPath, "DocumentSettings");
-            LoadEveryDocument.LoadDocuments();
-
-
+            MainDocumentLogic.logic = JsonDeserialization.DeSerializeObject<DocumentIDLogic>(DataSettings.SettingsFolderPath, "DocumentSettings");
+            LoadDocumentList.LoadDocuments();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             HoverPanel.Height = btn_AddFile.Height;
             HoverPanel.Top = btn_AddFile.Top;
+
+            ActiveControl = usrCtrlOpenFile;
             usrCtrlOpenFile.BringToFront();
-
-            
-
+            ActiveControl = usrCtrlOpenFile;
         }
 
         private void btn_AddFile_Click(object sender, EventArgs e)
         {
-            HoverPanel.Height = btn_AddFile.Height;
-            HoverPanel.Top = btn_AddFile.Top;
-            usrCtrlOpenFile.BringToFront();
-            usrCtrlOpenFile.ResetFormValues();
+            if (CompareUserControls.Compare(ActiveControl, usrCtrlOpenFile))
+            {
+
+            }
+            else
+            {
+              DialogResult result =   MessageBox.Show("Зміни не будуть збережені, перейти ?", "Увага !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    ActiveControl = usrCtrlOpenFile;
+                    HoverPanel.Height = btn_AddFile.Height;
+                    HoverPanel.Top = btn_AddFile.Top;
+                    usrCtrlOpenFile.BringToFront();
+                    usrCtrlOpenFile.ResetFormValues();
+                    ActiveControl = usrCtrlOpenFile;
+
+                }
+            }
+                
         }
 
         private void btn_FileList_Click(object sender, EventArgs e)
         {
-            HoverPanel.Height = btn_FileList.Height;
-            HoverPanel.Top = btn_FileList.Top;
-            usrCtrlDocumentList1.BringToFront();
-            usrCtrlDocumentList1.AddDocumentsToList();
-            
+            if (CompareUserControls.Compare(ActiveControl, usrCtrlDocumentList1))
+            {
 
-        }
+            }
+            else if (ActiveControl != usrCtrlOpenFile || ActiveControl == usrCtrlSetDocumentInfo1)
+            {
+                DialogResult result = MessageBox.Show("Зміни не будуть збережені, перейти ?", "Увага !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    ActiveControl = usrCtrlDocumentList1;
+                    HoverPanel.Height = btn_FileList.Height;
+                    HoverPanel.Top = btn_FileList.Top;
+                    usrCtrlDocumentList1.BringToFront();
+                    usrCtrlDocumentList1.AddDocumentsToList();
 
-        private void usrCtrlSetDocumentInfo1_Load(object sender, EventArgs e)
-        {
+                }
+            }
+            else
+            {
+                ActiveControl = usrCtrlDocumentList1;
+                HoverPanel.Height = btn_FileList.Height;
+                HoverPanel.Top = btn_FileList.Top;
+                usrCtrlDocumentList1.BringToFront();
+                usrCtrlDocumentList1.AddDocumentsToList();
+
+            }
 
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Console.WriteLine(MainDocumentLogic.DocumentList.Count);
-            MainDocumentLogic.SerializeDocumentList();
+            CleanDocumentFolder.DeleteDocuments();
+            SaveDocumentList.SerializeDocumentList();
             JsonSerialization.SerializeObject(MainDocumentLogic.logic, DataSettings.SettingsFolderPath, "DocumentSettings");
-            
-        }
-
-        private void usrCtrlDocumentList1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

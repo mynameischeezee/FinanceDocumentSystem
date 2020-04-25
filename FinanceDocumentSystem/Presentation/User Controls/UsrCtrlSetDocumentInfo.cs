@@ -22,26 +22,11 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
             InitializeComponent();
             
         }
-        
-        private void txtBoxDocumentName_TextChanged(object sender, EventArgs e)
-        {
-            DocumentOpenTemp.SetDocumentName(txtBox_DocumentName.Text);
-        }
-
-        private void lbl_DocumentDateInfo_Click(object sender, EventArgs e)
-        {
-            DocumentOpenTemp.SetDocumentSender(txtBox_DocumentSender.Text);
-        }
-
-        
-
         private void UsrCtrlSetDocumentInfo_Load(object sender, EventArgs e)
         {
             lbl_DocumentDateValue.Text = DocumentOpenTemp.DocumentDate;
             cmbBoxDocumentStatus.SelectedIndex = 0;
             cmbBoxDocumentType.SelectedIndex = 0;
-
-
         }
 
         private void btn_FinishAddFile_Click(object sender, EventArgs e)
@@ -60,8 +45,9 @@ namespace FinanceDocumentSystem.Presentation.User_Controls
             
             DocumentOpenTemp.ResetValues();
 
+            MainForm.ActiveControl = UsrCtrl;
             UsrCtrl?.BringToFront();
-
+            
 
         }
 

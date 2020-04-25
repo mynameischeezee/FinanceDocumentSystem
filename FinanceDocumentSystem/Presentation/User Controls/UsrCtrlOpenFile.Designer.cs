@@ -106,7 +106,6 @@
             this.Controls.Add(this.pnl_DragAndDrop);
             this.Name = "UsrCtrlOpenFile";
             this.Size = new System.Drawing.Size(1040, 680);
-            this.Load += new System.EventHandler(this.UsrtCtrlOpenFile_Load);
             this.pnl_DragAndDrop.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

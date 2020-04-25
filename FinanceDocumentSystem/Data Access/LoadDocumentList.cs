@@ -9,10 +9,10 @@ using FinanceDocumentSystem.Business_Logic.Class;
 
 namespace FinanceDocumentSystem.Data_Access
 {
-    public static class LoadEveryDocument
+    public static class LoadDocumentList
     {
-        public static DirectoryInfo Directory = new DirectoryInfo(DataSettings.DocumentFolderPath);
-        public static FileInfo[] Files = Directory.GetFiles("*.json");
+        private static DirectoryInfo Directory = new DirectoryInfo(DataSettings.DocumentFolderPath);
+        private static FileInfo[] Files = Directory.GetFiles("*.json");
 
         public static void LoadDocuments()
         {
